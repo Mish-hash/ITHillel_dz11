@@ -38,5 +38,47 @@ document.getElementById('reverseButton').addEventListener('click', reverceNodes)
 document.getElementById('chengeColorButton').addEventListener('click', chengePColor);
 
 
+/*
+2) Напишитк код реализующий логику светофора
 
+<div id="streetlight">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+Каждый div это свет, должны быть круглые и меть свет как светофор каждые 3и секунды
+
+*/
+
+const streetlightRed = document.body.getElementsByClassName('light red')[0];
+const streetlightYellow = document.body.getElementsByClassName('light yellow')[0];
+const streetlightGreen = document.body.getElementsByClassName('light green')[0];
+
+setTimeout(function chengeStreetlight() {
+    if(streetlightRed.classList.contains('active') && !streetlightYellow.classList.contains('active')){
+
+        streetlightYellow.classList.add('active');
+
+    }else if (streetlightYellow.classList.contains('active') && streetlightRed.classList.contains('active')) {
+
+        streetlightYellow.classList.remove('active');
+        streetlightRed.classList.remove('active');
+        streetlightGreen.classList.add('active');
+
+    }else if (streetlightGreen.classList.contains('active')) {
+
+        streetlightGreen.classList.remove('active');
+        streetlightYellow.classList.add('active');
+
+    }else if (streetlightYellow.classList.contains('active')) {
+
+        streetlightYellow.classList.remove('active');
+        streetlightRed.classList.add('active');
+
+    }
+
+    setTimeout(chengeStreetlight, 3000)
+
+}, 3000);
 

@@ -23,3 +23,41 @@ hr {
     flex-direction: column;
 }
 
+.streetlight_box {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    /* transition: 100ms; */
+    background-color: black;
+    border-radius: 5px;
+}
+
+.streetlight_box .light {
+    transition: 100ms;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    opacity: 0.2;
+    transition: 300ms;
+}
+
+.streetlight_box .light:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.streetlight_box .red {
+    background-color: red;
+}
+
+.streetlight_box .yellow {
+    background-color: yellow;
+}
+
+.streetlight_box .green {
+    background-color: rgb(61, 220, 61);
+}
+
+.streetlight_box .active {
+    opacity: 1;
+}
+
