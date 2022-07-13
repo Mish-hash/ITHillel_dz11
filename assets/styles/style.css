@@ -11,11 +11,15 @@ h1 {
     font-size: 20px;
 }
 
+hr {
+    width: 100%;
+}
+
 .container {
-    height: 100%;
 	padding: 30px;
 	overflow: hidden;
     display: flex;
-    justify-content: center;
+    align-items:center;
+    flex-direction: column;
 }
 
