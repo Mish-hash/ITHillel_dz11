@@ -82,3 +82,30 @@ setTimeout(function chengeStreetlight() {
 
 }, 3000);
 
+
+/*
+3) Дан массив array = [[1,2,3],[4,5,6],[7,8,9]];
+написать функцию которая посторит из него таблицу при помощи цикла и добавления элементов в DOM
+
+<table> - https://www.w3schools.com/html/html_tables.asp
+*/
+
+const arraTable = [[1,2,3],[4,5,6],[7,8,9]];
+
+const table = document.createElement('table');
+table.classList.add('table');
+
+arraTable.forEach((elem)=>{
+  let row = document.createElement('tr');
+
+  elem.forEach(el => {
+    const td = document.createElement('td');
+    td.innerText += el;
+    row.insertAdjacentElement('beforeend', td);
+  });
+
+  table.insertAdjacentElement('beforeend', row);
+})
+
+document.getElementById('app').insertAdjacentElement('beforeend', table);
+

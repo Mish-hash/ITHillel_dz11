@@ -61,3 +61,15 @@ hr {
     opacity: 1;
 }
 
+.table {
+    border: 1px solid;
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+.table td{
+    font-size: 40px;
+    border: 1px solid;
+    padding: 10px;
+}
+
